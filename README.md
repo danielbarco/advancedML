@@ -3,5 +3,5 @@ UZH course spring semester 2023
 
 Use conda to install an environment, then install dependencies from environment.yml
 ```
-conda env create --name envname --file=environments.yml
+conda env create --name envname --file=environment.yml
 ```

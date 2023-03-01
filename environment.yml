@@ -1,4 +1,4 @@
-name: base
+name: venv_advml
 channels:
   - defaults
 dependencies:

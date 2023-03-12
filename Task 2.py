@@ -8,7 +8,7 @@ from torchtext.datasets import YelpReviewPolarity
 from torchtext.data.utils import get_tokenizer
 from transformers import BertModel, BertTokenizer
 
-
+import numpy as np
 import torch
 import torchtext
 from torch.utils.data import DataLoader, Dataset
@@ -41,6 +41,28 @@ test_loader = DataLoader(test_data, batch_size=batchSize, shuffle=True, collate_
 #
 
 
+# num_samples = 560000
+# val_split = 0.01
+# # obtain the indices for all samples
+# indices = list(range(num_samples))
+# from torch.utils.data import SubsetRandomSampler, DataLoader
+
+# # randomly shuffle the indices
+# np.random.shuffle(indices)
+
+# # obtain the index for the split between training and validation sets
+# split_index = int(np.floor(val_split * num_samples))
+
+# # obtain the indices for the training and validation sets
+# train_indices, val_indices = indices[split_index:], indices[:split_index]
+
+# # define the samplers for each set
+# train_sampler = SubsetRandomSampler(train_indices)
+# val_sampler = SubsetRandomSampler(val_indices)
+
+# # define the dataloaders for each set
+# train_loader = DataLoader(train_data, sampler=val_sampler, batch_size=32)
+# val_loader = DataLoader(datapipe, sampler=val_sampler, batch_size=32)
 
 
 # Create a DataLoader that uses the collate function
@@ -100,8 +122,9 @@ def train(model, train_data, learning_rate, epochs):
         total_acc_train = 0
         total_loss_train = 0
         model.train()
-        for train_input, train_label in tqdm(train_loader):
-
+        for i, (train_input, train_label) in tqdm(enumerate(train_loader)):
+            if i == 10:
+                break
             train_label = train_label.to(device)
             mask = train_input['attention_mask'].to(device)
             input_id = train_input['input_ids'].squeeze(1).to(device)

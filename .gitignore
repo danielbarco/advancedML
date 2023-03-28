@@ -160,3 +160,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .data/datasets/YelpReviewPolarity/yelp_review_polarity_csv.tar.gz.promise.481827a5-7b2b-4a89-847c-582521fbcc88
+.data/datasets/YelpReviewPolarity/yelp_review_polarity_csv.tar.gz
+.data/datasets/YelpReviewPolarity/yelp_review_polarity_csv/test.csv
+.data/datasets/YelpReviewPolarity/yelp_review_polarity_csv/train.csv

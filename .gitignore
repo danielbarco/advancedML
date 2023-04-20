@@ -163,3 +163,4 @@ cython_debug/
 .data/datasets/YelpReviewPolarity/yelp_review_polarity_csv.tar.gz
 .data/datasets/YelpReviewPolarity/yelp_review_polarity_csv/test.csv
 .data/datasets/YelpReviewPolarity/yelp_review_polarity_csv/train.csv
+Assignment 2/.DS_Store

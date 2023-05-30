@@ -166,7 +166,6 @@ cython_debug/
 .data/datasets/YelpReviewPolarity/yelp_review_polarity_csv/train.csv
 Assignment 2/.DS_Store
 Assignment 2/src/rllib/
-<<<<<<< HEAD
 .DS_Store
 Assignment_3/.data/datasets/YelpReviewPolarity/yelp_review_polarity_csv.tar.gz
 Assignment_3/.data/datasets/YelpReviewPolarity/yelp_review_polarity_csv/test.csv
@@ -175,6 +174,3 @@ Assignment_3/.DS_Store
 Assignment_3/data/.DS_Store
 Assignment_3/data/datasets/.DS_Store
 .vscode/launch.json
-=======
-.vscode
->>>>>>> 1bd3add4885738c6b852d42677fcbf9fd0307996
